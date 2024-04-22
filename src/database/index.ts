@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 export async function setupMongo(): Promise<void> {
     try {
@@ -7,6 +7,7 @@ export async function setupMongo(): Promise<void> {
 
         }
         console.log('🎲 Connecting to DB...');
+        
         await mongoose.connect(process.env.MONGO_URL as string)
         console.log('✅ DB Connected!')
     } catch {

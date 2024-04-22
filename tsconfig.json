@@ -104,8 +104,8 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true,
+    "skipLibCheck": true, 
     "resolveJsonModule": true,
-    "outDir": "./build"                                 /* Skip type checking all .d.ts files. */
+    "outDir": "./build"                             /* Skip type checking all .d.ts files. */
   }
 }
