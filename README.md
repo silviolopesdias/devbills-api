@@ -1,10 +1,15 @@
+
+# Criar transações
+
+ - Id categoria, nome, valor, data, tipo
+
+
 # Listar as transações com filtros
 
  - por nome
  - por periodo
  - por categoria
 
-# Listar as categorias
 
 # Dados de saldos com filtros
   
@@ -23,6 +28,6 @@
  - nome, cor
  - Não é possivel criar categorias com o mesmo nome
 
-# Criar transações
 
- - categoria, nome, valor, data, tipo
+# Listar as categorias
+
