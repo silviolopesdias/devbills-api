@@ -1,7 +1,7 @@
 import { Category } from "./category.entity"
 
 
-export enum TranssactionType {
+export enum TransactionType {
     INCOME = 'income',
     EXPENSE = 'expense'
 }
@@ -12,7 +12,7 @@ type TransactionProps ={
     amount: number;
     date: Date;
     category: Category;
-    type: TranssactionType;
+    type: TransactionType;
 };
 
 export class Transaction {
@@ -21,7 +21,7 @@ export class Transaction {
     public amount: number;
     public date: Date;
     public category: Category;
-    public type: TranssactionType;
+    public type: TransactionType;
 
     constructor({_id,type,date,amount,category, title}: TransactionProps){
         this._id = _id;
