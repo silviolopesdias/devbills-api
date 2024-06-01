@@ -23,3 +23,14 @@ export  const indexTransactionsSchema = {
 
 const indextransactionObject = z.object(indexTransactionsSchema)
 export type IndexTransactionsDTO = z.infer<typeof indextransactionObject>
+
+
+export const getDashBoardSchema = {
+
+  beginDate: z.coerce.date().optional(),
+  endDate: z.coerce.date().optional(),
+
+}
+
+const getDashBoardObject = z.object(getDashBoardSchema)
+export type GetDashBoardDTO = z.infer<typeof getDashBoardObject>;
