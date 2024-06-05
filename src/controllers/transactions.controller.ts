@@ -3,6 +3,7 @@ import { NextFunction, Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import { TransactionsService } from "../services/transactions.services";
 import { CreateTransactionDTO, GetDashBoardDTO, GetFinancialEvolutionDTO, IndexTransactionsDTO } from "../dtos/transactions.dto";
+import { BodyRequest, QueryRequest } from "./types";
 
 
 
@@ -11,7 +12,7 @@ export class TransactionsController {
     constructor(private transactionsService: TransactionsService) { }
 
     create = async (
-        req: Request<unknown, unknown, CreateTransactionDTO>,
+        req: BodyRequest<CreateTransactionDTO>,
         res: Response,
         next: NextFunction
     ) => {
@@ -30,7 +31,7 @@ export class TransactionsController {
 
     };
     index = async (
-        req: Request<unknown, unknown, unknown, IndexTransactionsDTO>,
+        req: QueryRequest<IndexTransactionsDTO>,
         res: Response,
         next: NextFunction
     ) => {
@@ -46,7 +47,7 @@ export class TransactionsController {
         }
     }
         getDashBoard = async (
-            req: Request<unknown, unknown, unknown, GetDashBoardDTO>,
+            req: QueryRequest<GetDashBoardDTO>,
             res: Response,
             next: NextFunction
         ) => {
@@ -63,7 +64,7 @@ export class TransactionsController {
 
     }
     getFinancialEvolution = async (
-        req: Request<unknown, unknown, unknown, GetFinancialEvolutionDTO>,
+        req: QueryRequest<GetFinancialEvolutionDTO>,
         res: Response,
         next: NextFunction
     ) => {
